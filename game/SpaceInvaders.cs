@@ -41,7 +41,7 @@ namespace game
             playerPictureBox.Size = new Size(game.Player.Width, game.Player.Height);
             playerPictureBox.Location = new Point(game.Player.X, game.Player.Y);
             playerPictureBox.BackColor = Color.DarkBlue;
-            playerPictureBox.Image = Image.FromFile("C:\\Users\\Denis\\OneDrive\\Рабочий стол\\spaceship.png");
+            playerPictureBox.Image = Image.FromFile("Resources\\spaceship.png");
             playerPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             this.Controls.Add(playerPictureBox);
 
@@ -52,7 +52,7 @@ namespace game
                 alienPictureBox.Size = new Size(alien.Width, alien.Height);
                 alienPictureBox.Location = new Point(alien.X, alien.Y);
                 alienPictureBox.BackColor = Color.DarkBlue;
-                alienPictureBox.Image = Image.FromFile("C:\\Users\\Denis\\OneDrive\\Рабочий стол\\alien_1.png");
+                alienPictureBox.Image = Image.FromFile("Resources\\alien_1.png");
                 alienPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
                 alienPictureBoxes.Add(alienPictureBox);
                 this.Controls.Add(alienPictureBox);

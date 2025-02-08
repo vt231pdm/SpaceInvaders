@@ -10,10 +10,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "imageforgamepng", "imageforgamepng", "{1C6D2D63-89E1-47B9-860C-FBA90F861243}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Images", "Images", "{54E3A458-5E4C-4517-B5FE-84F10FAC129D}"
-	ProjectSection(SolutionItems) = preProject
-		..\image\alien_1.png = ..\image\alien_1.png
-		..\image\spaceship.png = ..\image\spaceship.png
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
