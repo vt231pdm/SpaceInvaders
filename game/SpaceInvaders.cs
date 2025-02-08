@@ -37,26 +37,27 @@ namespace game
             Level.BackColor = Color.Transparent;
             this.Controls.Add(Level);
 
-            playerPictureBox = new PictureBox();
-            playerPictureBox.Size = new Size(game.Player.Width, game.Player.Height);
-            playerPictureBox.Location = new Point(game.Player.X, game.Player.Y);
-            playerPictureBox.BackColor = Color.DarkBlue;
-            playerPictureBox.Image = Image.FromFile("Resources\\spaceship.png");
-            playerPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            playerPictureBox = CreatePictureBox(game.Player.Width, game.Player.Height, game.Player.X, game.Player.Y, "Resources\\spaceship.png");
             this.Controls.Add(playerPictureBox);
 
             alienPictureBoxes = new List<PictureBox>();
             foreach (var alien in game.Aliens)
             {
-                var alienPictureBox = new PictureBox();
-                alienPictureBox.Size = new Size(alien.Width, alien.Height);
-                alienPictureBox.Location = new Point(alien.X, alien.Y);
-                alienPictureBox.BackColor = Color.DarkBlue;
-                alienPictureBox.Image = Image.FromFile("Resources\\alien_1.png");
-                alienPictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+                var alienPictureBox = CreatePictureBox(alien.Width, alien.Height, alien.X, alien.Y, "Resources\\alien_1.png");
                 alienPictureBoxes.Add(alienPictureBox);
                 this.Controls.Add(alienPictureBox);
             }
+        }
+
+        private PictureBox CreatePictureBox(int width, int height, int x, int y, string imagePath)
+        {
+            var pictureBox = new PictureBox();
+            pictureBox.Size = new Size(width, height);
+            pictureBox.Location = new Point(x, y);
+            pictureBox.BackColor = Color.DarkBlue;
+            pictureBox.Image = Image.FromFile(imagePath);
+            pictureBox.SizeMode = PictureBoxSizeMode.Zoom;
+            return pictureBox;
         }
 
         private void Timer_Tick(object sender, EventArgs e)
