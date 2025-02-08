@@ -101,5 +101,13 @@
   <ItemGroup>
     <None Include="Resources\planet.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\alien_1.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\spaceship.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
