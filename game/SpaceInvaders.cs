@@ -103,9 +103,24 @@ namespace game
 
         private void PauseGame()
         {
+            Pause();
+            ShowPauseMessage();
+            Resume();
+        }
+
+        private void Pause()
+        {
             isPaused = true;
             timer.Stop();
+        }
+
+        private void ShowPauseMessage()
+        {
             MessageBox.Show("Гра на паузі", "Пауза", MessageBoxButtons.OK);
+        }
+
+        private void Resume()
+        {
             isPaused = false;
             timer.Start();
         }
